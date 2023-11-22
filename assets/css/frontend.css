@@ -1,21 +1,21 @@
 /* custom CSS */
 
-/* Flex financ-simulator */
+/* Flex Fin_simulator */
 
-.mc-financ-simulator{
+.mc-fin_simulator{
     position: relative;
 }
 
-.mc-financ-simulator.flexfinanc-simulator{
+.mc-fin_simulator.flexfin_simulator{
     border: 0 !important;
 }
 
-.mc-financ-simulator .img-fluid {
+.mc-fin_simulator .img-fluid {
     max-width: 100%;
     height: auto;
 }
 
-.mc-financ-simulator .mvs-container{
+.mc-fin_simulator .mvs-container{
     max-width: 1140px;
     width: 100%;
     padding-right: 50px;
@@ -24,35 +24,35 @@
     margin-left: auto;
 }
 
-.mc-financ-simulator .flex-direction-nav{
+.mc-fin_simulator .flex-direction-nav{
     display: none !important;
 }
 
-.mc-financ-simulator .flex-control-nav {
+.mc-fin_simulator .flex-control-nav {
     bottom: 10px !important;
 }
 
-.mc-financ-simulator .flex-direction-nav a{
+.mc-fin_simulator .flex-direction-nav a{
     height: 50px;
 }
 
-.mc-financ-simulator .financ-simulator-details-container {
+.mc-fin_simulator .fin_simulator-details-container {
     color: #FFF;
     top: 50%;
     transform: translateY(-50%);
     position: absolute;
 }
 
-.mc-financ-simulator .financ-simulator-details-container .subtitle{
+.mc-fin_simulator .fin_simulator-details-container .subtitle{
     margin-bottom: 15px;        
 }
 
-.mc-financ-simulator .financ-simulator-details-container .financ-simulator-title{
+.mc-fin_simulator .fin_simulator-details-container .fin_simulator-title{
     color: #FFF;
     font-weight: 700;
 }
 
-.mc-financ-simulator .financ-simulator-details-container a{
+.mc-fin_simulator .fin_simulator-details-container a{
     color: #fff;
     border-radius: 5px;
     text-transform: uppercase;
@@ -61,19 +61,19 @@
     text-decoration: none;
 }
 
-.mc-financ-simulator .financ-simulator-details-container a:hover{
+.mc-fin_simulator .fin_simulator-details-container a:hover{
     color: #fff;
 }
 
-.mc-financ-simulator .flexfinanc-simulator .slides {
+.mc-fin_simulator .flexfin_simulator .slides {
     padding: 0 !important;
 }
 
-.mc-financ-simulator .flex-control-paging li a.flex-active {
+.mc-fin_simulator .flex-control-paging li a.flex-active {
     width: 25px !important;
 }
 
-.mc-financ-simulator .flex-control-nav li {
+.mc-fin_simulator .flex-control-nav li {
     margin: 0 3px !important;
 }
 
@@ -81,20 +81,20 @@
 
 /* Style 1 */
 
-.mc-financ-simulator.style-1 .financ-simulator-details-container .link{
+.mc-fin_simulator.style-1 .fin_simulator-details-container .link{
     background-color: #1d4671;
 }
 
-.mc-financ-simulator.style-1 .flex-control-paging li a.flex-active {
+.mc-fin_simulator.style-1 .flex-control-paging li a.flex-active {
     background: rgb(182, 2, 2) !important;
 }
 
-.mc-financ-simulator.style-1 .flex-control-paging li a {
+.mc-fin_simulator.style-1 .flex-control-paging li a {
     background: rgb(247, 247, 247);
 }
 
 /* Style 2 */
 
-.mc-financ-simulator.style-2 .financ-simulator-details-container .link{
+.mc-fin_simulator.style-2 .fin_simulator-details-container .link{
     background-color: #71481d;
 }

@@ -1,10 +1,10 @@
 <?php
 
-if( ! class_exists( 'MC_financSimulator_Shortcode') ){  
-    class MC_financSimulator_Shortcode{
+if( ! class_exists( 'MC_Fin_simulator_Shortcode') ){  
+    class MC_Fin_simulator_Shortcode{
         public function __construct()
         {
-            add_shortcode( 'mc_financSimulator', array( $this, 'add_shortcode' ) );
+            add_shortcode( 'mc_fin_simulator', array( $this, 'add_shortcode' ) );
         }
 
         public function add_shortcode( $atts = array(), $content = null, $tag = '' ){
@@ -26,13 +26,13 @@ if( ! class_exists( 'MC_financSimulator_Shortcode') ){
 
             //build HTML of shortcode on buffer and return
             ob_start();
-            require( MC_financSimulator_PATH . 'views/mc-financSimulator-shortcode.php' );
+            require( MC_FIN_SIMULATOR_PATH . 'views/mc-fin_simulator-shortcode.php' );
             //enqueue all necessary scripts - register in class construct
-            wp_enqueue_script( 'mc-financSimulator-main-jp' );
-            wp_enqueue_style( 'mc-financSimulator-main-css' );
-            wp_enqueue_style( 'mc-financSimulator-style-css' );
+            wp_enqueue_script( 'mc-fin_simulator-main-jp' );
+            wp_enqueue_style( 'mc-fin_simulator-main-css' );
+            wp_enqueue_style( 'mc-fin_simulator-style-css' );
             //Ativa a função que interfere em um arquivo JAVASCRIPT
-            mc_financSimulator_options();
+            mc_fin_simulator_options();
             return ob_get_clean();
         }
 
