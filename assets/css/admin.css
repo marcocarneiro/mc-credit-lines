@@ -1,9 +1,9 @@
-.mc-fin_simulator-metabox label{
+/* .mc-credit_lines-metabox label{
     color: #f00;
-}
-.mc-fin_simulator-metabox td{
+} */
+.mc-credit_lines-metabox td{
     padding: 5px;
 }
-.mc-fin_simulator-metabox th{
+.mc-credit_lines-metabox th{
     padding: 10px 10px 5px 0;
 }

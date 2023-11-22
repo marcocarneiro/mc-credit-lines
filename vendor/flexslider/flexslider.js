@@ -1,9 +1,9 @@
 jQuery(window).load(function(){
-    jQuery('.flexfin_simulator').flexfin_simulator({
+    jQuery('.flexcredit_lines').flexcredit_lines({
         animation: 'slide',
         touch: true,
         directionNav: false,
         smoothHeight: true,
-        controlNav: FIN_SIMULATOR_OPTIONS.controlNav,
+        controlNav: credit_lines_OPTIONS.controlNav,
     });
 });
