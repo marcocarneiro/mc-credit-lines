@@ -1,4 +1,8 @@
-<h3>
+<p>
+    Exibiu a bagaça!!!
+</p>
+
+<!-- <h3>
     <?php echo (!empty( $content )) ? esc_html($content) : esc_html( Mc_credit_lines_Settings::$options['mc_credit_lines_title'] ); ?>
 </h3>
 <div class="mc-credit_lines flexcredit_lines <?php //include class with selected option in admin
@@ -26,8 +30,7 @@
                 the_post_thumbnail( 'full', array( 'class'=>'img-fluid' ) ); 
             }else{
                 echo '<img src="'.MC_credit_lines_URL.'assets/images/default.jpg" class="img-fluid wp-post-image" >';
-            }
-            
+            }            
             ?>
             <div class="mcs-container">
                 <div class="credit_lines-details-container">
@@ -38,9 +41,9 @@
                         <div class="credit_lines-description">
                             <div class="subtitle"><?php the_content(); ?></div>
                             <span>O que é isso?</span>
-                            <!-- <a href="<?php echo esc_attr( $button_parcelas ); ?>" class="link"
+                            <a href="<?php echo esc_attr( $button_parcelas ); ?>" class="link"
                             <?php echo $newwindow == '1' ? 'target="_blank"' : ''; ?>>
-                            <?php echo esc_html( $button_text ); ?></a> -->
+                            <?php echo esc_html( $button_text ); ?></a>
                         </div>
                     </div>
                 </div>
@@ -52,4 +55,4 @@
     endif; 
     ?>
     </ul>
-</div>
+</div> -->

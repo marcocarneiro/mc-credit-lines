@@ -50,6 +50,7 @@ if( ! class_exists( 'MC_credit_lines_Post_Type')){
             $columns['mc_credit_lines_nome_linha'] = esc_html__('Nome da linha de crédito', 'mc-credit_lines');
             $columns['mc_credit_lines_parcelas'] = esc_html__('Máximo de parcelas', 'mc-credit_lines');
             $columns['mc_credit_lines_taxa'] = esc_html__('Taxa de juros', 'mc-credit_lines');
+            $columns['shortcode'] = esc_html__('Shortcode', 'mc-credit_lines');
             return $columns;
         }
 
@@ -64,10 +65,18 @@ if( ! class_exists( 'MC_credit_lines_Post_Type')){
                 case 'mc_credit_lines_taxa':
                     echo esc_html( get_post_meta( $post_id, 'mc_credit_lines_taxa', true ));
                 break;
-            }
+                case 'shortcode':
+                    echo esc_html( '[mc_credit_lines id="'  . $post_id .'"]');
+                break;
+            } 
         }
 
+        public function buildShortcode($post_id){
+            
+        }
+        
         public function mc_sortable_columns( $columns ){
+            //Adiciona o ordenador na coluna com o nome da linha
             /* $columns['mc_credit_lines_nome_linha'] = 'mc_credit_lines_nome_linha';
             return $columns; */
         }

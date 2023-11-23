@@ -47,7 +47,7 @@ if( ! class_exists( 'MC_credit_lines')){
 
             require_once( MC_credit_lines_PATH . 'post-types/class.mc-credit_lines-cpt.php' );
             $mc_credit_lines_cpt = new MC_credit_lines_Post_Type();
-
+            
             require_once( MC_credit_lines_PATH . 'class.mc-credit_lines-settings.php' );
             $Mc_credit_lines_Settings = new Mc_credit_lines_Settings();
 

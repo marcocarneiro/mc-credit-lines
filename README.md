@@ -4,3 +4,7 @@
  O frontend vai exibir um campo para o valor desejado e número de parcelas, o componente
  vai exibir o valor das parcelas.<br>
  Perfeito para sites de entidades financeiras.
+ 
+ ## Continuar o trabalho nos arquivos:
+ - 'shortcodes/class.mc-credit_lines-shortcode.php' - Configuração dos assets e arquivos do frontend
+ - 'views/mc-credit_lines-shortcode.php' - Frontend do plugin

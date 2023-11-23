@@ -2,6 +2,7 @@
 
 if( ! class_exists( 'MC_credit_lines_Shortcode') ){  
     class MC_credit_lines_Shortcode{
+
         public function __construct()
         {
             add_shortcode( 'mc_credit_lines', array( $this, 'add_shortcode' ) );
