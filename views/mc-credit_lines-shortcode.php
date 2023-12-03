@@ -1,6 +1,27 @@
 <?php
     //Usar esc_html para escapar código HTML e esc_attr para atributos de tags HTML
 ?>
+<?php
+    $args = array(
+        'post_type' => 'mc-credit_lines',
+        'post_status' => 'publish',
+        'post__in' => $id,
+        'orderby' => $orderby
+    );
+
+    $mc_query = new WP_Query( $args );
+    if( $mc_query->have_posts() ):
+        while( $mc_query->have_posts() ): $mc_query->the_post(  );
+        $button_nome = get_post_meta( get_the_ID(), 'mc_credit_lines_nome_linha', true );
+        $button_parcelas = get_post_meta( get_the_ID(), 'mc_credit_lines_parcelas', true );
+        $taxa = get_post_meta( get_the_ID(), 'mc_credit_lines_taxa', true );
+?>
+
+<?php 
+    endwhile; 
+    wp_reset_postdata(  );//restore default loop posts
+endif; 
+?>
 
 <table class="simulacao_tabela">
     <tr>
@@ -13,13 +34,16 @@
             <input type="number" class="simulacao_valor" placeholder="Valor desejado">
         </td>
         <td>
-        <input type="number" class="simulacao_parcelas" size="4" oninput="test()" placeholder="Num. de parcelas">
+            <input type="number" maxparcelas="<?php echo esc_attr($button_parcelas); ?>" 
+            class="simulacao_parcelas" size="4" oninput="test()" placeholder="Num. de parcelas">
         </td> 
     </tr>
     <tr>
         <td colspan="2">
             <p>Valor das parcelas:</p>
-            <h2 id="simulacao_resultado">R$ <span>0,00</span></h2>
+            <h2 id="simulacao_resultado" 
+            taxa="<?php echo esc_attr($taxa); ?>">
+            R$ <span>0,00</span></h2>
         </td>
     </tr>
 </table>
