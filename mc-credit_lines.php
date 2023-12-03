@@ -113,10 +113,10 @@ if( ! class_exists( 'MC_credit_lines')){
         }
 
         public function register_scripts(){
-            //register script to use only include shortcode in page 
-            wp_register_script( 'mc-credit_lines-main-jp', MC_credit_lines_URL . 'vendor/flexcredit_lines/jquery.flexcredit_lines-min.js', array('jquery'), MC_credit_lines_VERSION, true );
-            wp_register_style( 'mc-credit_lines-main-css', MC_credit_lines_URL . 'vendor/flexcredit_lines/flexcredit_lines.css', array(), MC_credit_lines_VERSION, 'all' );
+            //register script to use only include shortcode in page
+            wp_register_script( 'mc-credit_lines-main-jp', MC_credit_lines_URL . 'vendor/main.js', array(), MC_credit_lines_VERSION, true );
             wp_register_style( 'mc-credit_lines-style-css', MC_credit_lines_URL . 'assets/css/frontend.css', array(), MC_credit_lines_VERSION, 'all' );
+            
         }
 
         public function register_admin_scripts(){

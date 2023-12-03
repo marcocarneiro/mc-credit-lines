@@ -1,14 +1,40 @@
-<p>
-    Exibiu a bagaça!!!
-</p>
+<?php
+    //Usar esc_html para escapar código HTML e esc_attr para atributos de tags HTML
+?>
 
-<!-- <h3>
-    <?php echo (!empty( $content )) ? esc_html($content) : esc_html( Mc_credit_lines_Settings::$options['mc_credit_lines_title'] ); ?>
-</h3>
-<div class="mc-credit_lines flexcredit_lines <?php //include class with selected option in admin
+<table class="simulacao_tabela">
+    <tr>
+        <td colspan="2">
+            <p>Digite o valor desejado e em seguida digite as parcelas</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" class="simulacao_valor" placeholder="Valor desejado">
+        </td>
+        <td>
+        <input type="number" class="simulacao_parcelas" size="4" oninput="test()" placeholder="Num. de parcelas">
+        </td> 
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p>Valor das parcelas:</p>
+            <h2 id="simulacao_resultado">R$ <span>0,00</span></h2>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+
+<!--<?php echo (!empty( $content )) ? esc_html($content) : esc_html( Mc_credit_lines_Settings::$options['mc_credit_lines_title'] ); ?>
+
+<?php //include class with selected option in admin
     echo ( isset( Mc_credit_lines_Settings::$options['mc_credit_lines_style']) ) ? esc_attr(Mc_credit_lines_Settings::$options['mc_credit_lines_style']) : 'style-1';
 ?>
-">
+
     <ul class="slides">
         <?php
         $args = array(

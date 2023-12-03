@@ -1,100 +1,16 @@
 /* custom CSS */
 
-/* Flex credit_lines */
-
-.mc-credit_lines{
-    position: relative;
-}
-
-.mc-credit_lines.flexcredit_lines{
+.simulacao_tabela, .simulacao_tabela td{
+    border-collapse: separate;
     border: 0 !important;
+    background: none !important;
+    padding: 5px !important;
 }
 
-.mc-credit_lines .img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-
-.mc-credit_lines .mvs-container{
-    max-width: 1140px;
-    width: 100%;
-    padding-right: 50px;
-    padding-left: 50px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.mc-credit_lines .flex-direction-nav{
-    display: none !important;
-}
-
-.mc-credit_lines .flex-control-nav {
-    bottom: 10px !important;
-}
-
-.mc-credit_lines .flex-direction-nav a{
-    height: 50px;
-}
-
-.mc-credit_lines .credit_lines-details-container {
-    color: #FFF;
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
-}
-
-.mc-credit_lines .credit_lines-details-container .subtitle{
-    margin-bottom: 15px;        
-}
-
-.mc-credit_lines .credit_lines-details-container .credit_lines-title{
-    color: #FFF;
-    font-weight: 700;
-}
-
-.mc-credit_lines .credit_lines-details-container a{
-    color: #fff;
-    border-radius: 5px;
-    text-transform: uppercase;
-    padding: 5px 25px;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.mc-credit_lines .credit_lines-details-container a:hover{
-    color: #fff;
-}
-
-.mc-credit_lines .flexcredit_lines .slides {
-    padding: 0 !important;
-}
-
-.mc-credit_lines .flex-control-paging li a.flex-active {
-    width: 25px !important;
-}
-
-.mc-credit_lines .flex-control-nav li {
-    margin: 0 3px !important;
-}
-
-/* Design Options */
-
-/* Style 1 */
-
-.mc-credit_lines.style-1 .credit_lines-details-container .link{
-    background-color: #1d4671;
-}
-
-.mc-credit_lines.style-1 .flex-control-paging li a.flex-active {
-    background: rgb(182, 2, 2) !important;
-}
-
-.mc-credit_lines.style-1 .flex-control-paging li a {
-    background: rgb(247, 247, 247);
-}
-
-/* Style 2 */
-
-.mc-credit_lines.style-2 .credit_lines-details-container .link{
-    background-color: #71481d;
+.simulacao_tabela input{
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #aaa !important;
 }
