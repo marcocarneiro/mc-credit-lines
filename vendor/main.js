@@ -8,7 +8,7 @@ var calc_parcelas = (taxa, maxparcs, parcelas, el)=> {
     //Retorna a tag span onde o resultado deve ser exibido
     const el_saida = tabela.querySelector('.txt_val_parcelas')
     //Converte o valor da taxa em um valor para cálculo, exemplo(2% = 0.02)
-    const taxaPercent = taxa
+    const taxaPercent = taxa / 100
 
     var resultado = 'R$ 0,00'
     
@@ -23,6 +23,7 @@ var calc_parcelas = (taxa, maxparcs, parcelas, el)=> {
         resultado = parseInt(valor) * ((Math.pow(1 + taxaPercent, parcelas) * taxa) / (Math.pow(1 + taxaPercent, parcelas) - 1));
     }
     el_saida.innerText = resultado
+    console.log(taxaPercent)
 }
 
 /*
