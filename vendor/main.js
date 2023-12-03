@@ -7,6 +7,8 @@ var calc_parcelas = (taxa, maxparcs, parcelas, el)=> {
     const inputParcelas =  tabela.querySelector('.simulacao_parcelas')
     //Retorna a tag span onde o resultado deve ser exibido
     const el_saida = tabela.querySelector('.txt_val_parcelas')
+    //Converte o valor da taxa em um valor para cálculo, exemplo(2% = 0.02)
+    const taxaPercent = taxa
 
     var resultado = 'R$ 0,00'
     
@@ -15,8 +17,10 @@ var calc_parcelas = (taxa, maxparcs, parcelas, el)=> {
         inputParcelas.value = 0
     }else if(parcelas > maxparcs){
         resultado = 'Quantidade máxima de parcelas é ' + maxparcs + ', digite outro valor.'
+    }else if(inputParcelas.value == 0){
+        resultado = 'Digite um total de parcelas.'
     }else{
-        resultado = parseInt(valor) * ((Math.pow(1 + taxa, parcelas) * taxa) / (Math.pow(1 + taxa, parcelas) - 1));
+        resultado = parseInt(valor) * ((Math.pow(1 + taxaPercent, parcelas) * taxa) / (Math.pow(1 + taxaPercent, parcelas) - 1));
     }
     el_saida.innerText = resultado
 }
