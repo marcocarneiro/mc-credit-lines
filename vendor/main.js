@@ -1,16 +1,27 @@
 var calc_parcelas = (taxa, maxparcs, parcelas, el)=> {
+    //Navega para a tabela principal
+    const tabela = el.parentNode.parentNode.parentNode.parentNode
     //Navega para o input com o valor desejado
-    const valor = el.parentNode.parentNode.children[0].children[0].value
-    //console.log(taxa, maxparcs, parseInt(parcelas))
-    if(parseInt(valor) > 0){
+    const valor = tabela.querySelector('.simulacao_valor').value
+    //Retorna o campo com quantidade de parcelas
+    const inputParcelas =  tabela.querySelector('.simulacao_parcelas')
+    //Retorna a tag span onde o resultado deve ser exibido
+    const el_saida = tabela.querySelector('.txt_val_parcelas')
 
+    var resultado = 'R$ 0,00'
+    
+    if(parseInt(valor) == 0){
+        resultado = 'O campo "Valor desejado" não pode ser zero.'
+        inputParcelas.value = 0
+    }else if(parcelas > maxparcs){
+        resultado = 'Quantidade máxima de parcelas é ' + maxparcs + ', digite outro valor.'
     }else{
-
+        resultado = parseInt(valor) * ((Math.pow(1 + taxa, parcelas) * taxa) / (Math.pow(1 + taxa, parcelas) - 1));
     }
+    el_saida.innerText = resultado
 }
 
 /*
-
 function calculaParcela(valor, parcelas, juros)
     {
         resultado = valor * ((Math.pow(1 + juros, parcelas) * juros) / (Math.pow(1 + juros, parcelas) - 1));

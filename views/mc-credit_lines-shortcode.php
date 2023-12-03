@@ -20,9 +20,8 @@
 <table class="simulacao_tabela">
     <tr>
         <td colspan="2">
-            <p>Digite o valor desejado e em seguida digite as parcelas<br>
+            Digite o valor desejado e em seguida digite as parcelas<br>
             <small>(taxa de <?php echo esc_html($taxa); ?>% / mês):</small>
-            </p>
         </td>
     </tr>
     <tr>
@@ -31,16 +30,17 @@
             <input type="number" class="simulacao_valor" value="0">
         </td>
         <td>
+            <label>Número de parcelas:</label><br>
             <input type="number" class="simulacao_parcelas" 
             oninput="calc_parcelas(<?php echo esc_attr($taxa); ?>, <?php echo esc_attr($button_parcelas); ?>, this.value, this)" 
-            placeholder="Num. de parcelas">
+            placeholder="Digite num. de parcelas">
         </td> 
     </tr>
     <tr>
         <td colspan="2">
             <p>Valor das parcelas:</p>
             <h2 id="simulacao_resultado">
-            R$ <span>0,00</span></h2>
+            <span class="txt_val_parcelas">0,00</span></h2>
         </td>
     </tr>
 </table>
