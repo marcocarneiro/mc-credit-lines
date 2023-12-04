@@ -65,6 +65,9 @@ if( ! class_exists( 'MC_credit_lines')){
             define( 'MC_credit_lines_VERSION', '1.0.0' );
         }
 
+        //Métodos de ativação, desativação e desinstalação invocados
+        //por HHOKS no final dessa classe
+
         public static function activate(){
             update_option( 'rewrite_rules', '');
         }
@@ -74,8 +77,20 @@ if( ! class_exists( 'MC_credit_lines')){
             unregister_post_type( 'mc-credit_lines' );
         }
 
+        //Método invocado pelo Hook register_uninstall_hook no final dessa classe
         public static function uninstall(){
-
+            //Remove do BD os options do plugin
+            delete_option( 'mc_credit_lines_options' );
+            //Remove os posts relacionados ao plugin
+            $posts = get_posts(array(
+                    'post_type' => 'mc-credit_lines',
+                    'number_posts' => -1,
+                    'post_status' => 'any'
+                )
+            );
+            foreach($posts as $post){
+                wp_delete_post( $post->ID, true);
+            }
         }
 
         public function add_menu(){
